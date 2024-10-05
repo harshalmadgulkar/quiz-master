@@ -1,35 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import Navbar from './components/Navbar.jsx';
+import QuizScreen from './components/QuizScreen.jsx';
+import JoinScreen from './components/JoinScreen.jsx';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
+  const [isQuizStarted, setIsQuizStarted] = useState(false);
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className='flex flex-col h-screen bg-gray-100 gap-10'>
+      <Navbar />
+      <div className='flex justify-around w-full items-center max-md:items-start max-md:h-full'>
+        {isQuizStarted ? (
+          <QuizScreen retry={() => setIsQuizStarted(false)} />
+        ) : (
+          <JoinScreen start={() => setIsQuizStarted(true)} />
+        )}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default App
+export default App;

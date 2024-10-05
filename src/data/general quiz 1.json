@@ -1,0 +1,37 @@
+[
+  {
+    "title": "What is the capital of France?",
+    "options": ["Paris", "London", "Berlin", "Rome"],
+    "correctOptionIndex": 0
+  },
+  {
+    "title": "Which of the following planets is known as the Red Planet?",
+    "options": ["Earth", "Mars", "Jupiter", "Saturn"],
+    "correctOptionIndex": 1
+  },
+  {
+    "title": "What is the largest living species of lizard?",
+    "options": [
+      "Komodo dragon",
+      "Saltwater crocodile",
+      "Black mamba",
+      "African elephant"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "title": "Which of the following authors wrote 'Harry Potter'?",
+    "options": [
+      "F. Scott Fitzgerald",
+      "Harper Lee",
+      "Jane Austen",
+      "J.K. Rowling"
+    ],
+    "correctOptionIndex": 3
+  },
+  {
+    "title": "What is the chemical symbol for gold?",
+    "options": ["Ag", "Au", "Hg", "Pb"],
+    "correctOptionIndex": 1
+  }
+]
