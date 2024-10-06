@@ -6,7 +6,7 @@ const QuizResult = ({ result, retry }) => {
       <h2 className='text-xl font-bold text-center'>
         Result: {result.percentage}%
       </h2>
-      <p>
+      <p className='max-md:text-center'>
         Selected {result.correct} corect options out of {result.total}{' '}
         questions.
       </p>
